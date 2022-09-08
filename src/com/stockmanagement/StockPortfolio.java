@@ -1,9 +1,10 @@
 package com.stockmanagement;
 
 import java.util.ArrayList;
+
 import java.util.Scanner;
 
-public class StockPortfolio {
+public class StockPortfolio{
 
 	Scanner scanner = new Scanner(System.in);
 
@@ -52,4 +53,19 @@ public class StockPortfolio {
          return totalValue;
 	}
 	
-}
+	public double debit() {
+		@SuppressWarnings("unused")
+		double remainingAmt = 0.0;
+		System.out.println("Enter the amout to be debited");
+		double withdrawAmout = scanner.nextDouble();
+		if(withdrawAmout < totalStockValue()) {
+	    remainingAmt = totalStockValue() - withdrawAmout;
+		}
+	else {
+		System.out.println("Debit amount exceeded account balance");
+		}
+		return remainingAmt;
+		//System.out.println("Remaining amout is : "+remainingAmt);
+	}
+	
+	}

@@ -13,7 +13,7 @@ public class StockMain {
 	
 	boolean check = true;
 	while(check == true) {
-		System.out.println("\n 1) Add Stock\n 2) Stock Value\n 3)Each Stock Value\n 4)Total Stock Value");
+		System.out.println("\n 1) Add Stock\n 2) Stock Value\n 3)Each Stock Value\n 4)debit amout\n 5)Total Stock Value");
 		int choice = scanner.nextInt();
 		switch(choice) {
 		case 1:
@@ -27,14 +27,17 @@ public class StockMain {
 		case 3:
 			System.out.println(stockportfolio.totalEachStockValue());
 			System.out.println(stockportfolio.list.toString());
-			break;
 			
 		case 4:
+			System.out.println(stockportfolio.debit());
+			break;
+			
+		case 5:
 			check = false;
 			break;
 			
 		}
-		scanner.close();
+		//scanner.close();
 	}
 	}
 
